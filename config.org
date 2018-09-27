@@ -437,3 +437,12 @@ Kills the entire word your cursor is in. Equivalent to 'ciw' in vim
         (setq linum-relative-current-symbol "")
         (add-hook 'prog-mode-hook 'linum-relative-mode))
 #+END_SRC
+** Multiple-cursors
+#+BEGIN_SRC emacs-lisp
+    (use-package multiple-cursors
+      :ensure t
+      :bind
+      ("C-S-c C-S-c" . mc/edit-lines)
+      ("C->" . mc/mark-next-like-this)
+      ("C-<" . mc/mark-previous-like-this))
+#+END_SRC
